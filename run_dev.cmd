@@ -1,0 +1,3 @@
+@echo off
+echo Starting dev...
+npm run dev
