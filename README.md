@@ -1,25 +1,80 @@
-# User Management (Next.js + MongoDB) - Command Prompt & PowerShell friendly
 
-This scaffold implements a simple user-management system (CRUD + Auth) **without Supabase** using Next.js API routes and MongoDB.
+# سیستم مدیریت کاربر (Next.js + MongoDB)
 
-Features:
-- Register / Login (JWT)
-- Role management (user / admin / manager)
-- Password reset (email flow placeholder)
-- Full CRUD for user profiles
-- Activity log (basic)
+این پروژه یک **سیستم مدیریت کاربر (CRUD + Auth)** است که با **Next.js** و **MongoDB** ساخته شده و برای اجرا در **Command Prompt** و **PowerShell** به‌طور کامل سازگار است.
+نسخه‌ی آنلاین در:
+[https://1-kappa-nine-59.vercel.app/](https://1-kappa-nine-59.vercel.app/)
 
-Files include ready-to-run **Command Prompt (.cmd)** and **PowerShell (.ps1)** helper scripts.
 
-## Quick start (Windows)
 
-1. Copy `.env.local.example` to `.env.local` and set `MONGODB_URI` and `JWT_SECRET`.
-2. In Command Prompt: `setup.cmd`
-   - installs dependencies and starts dev server with `npm run dev`
+## معرفی پروژه
 
-PowerShell alternative: `.\setup.ps1`
+پروژه شامل بخش‌های ثبت‌نام، ورود، خروج، احراز هویت با JWT، مدیریت نقش‌ها (کاربر، مدیر، ادمین)، تغییر یا بازیابی رمز عبور و ثبت فعالیت‌های کاربران است.
+از API داخلی Next.js برای ارتباط با پایگاه داده استفاده می‌کند، بنابراین نیازی به سرور جداگانه ندارد.
 
-## Notes
-- Password reset email flow is a placeholder. Integrate an email provider (SendGrid/Mailgun) for production.
-- For SQLite or JSON-file option, replace db utility.
-- This scaffold uses simple JWT authentication for clarity — adapt for refresh tokens if needed.
+
+
+## پیش‌نیازها
+
+* **Node.js 18 یا بالاتر**
+* **MongoDB** (لوکال یا Atlas آنلاین)
+* داشتن npm برای نصب وابستگی‌ها
+
+
+
+## نحوه نصب و اجرا
+
+1. فایل پروژه را در سیستم خود کپی یا استخراج کنید.
+2. فایل `.env.local.example` را به `.env.local` تغییر نام دهید و مقدارهای زیر را وارد کنید:
+
+   
+   MONGODB_URI=mongodb://localhost:27017/userdb
+   JWT_SECRET=یک_رمز_دلخواه
+   
+3. اگر از MongoDB لوکال استفاده می‌کنی، در PowerShell اجرا کن:
+
+   
+   mongod
+   
+
+   و باز بگذارش.
+4. حالا در مسیر پروژه دستور زیر را بزن:
+
+   ```
+   setup.cmd
+   ```
+
+   یا در PowerShell:
+
+   
+   .\setup.ps1
+   
+
+   تا وابستگی‌ها نصب شوند و سرور با `npm run dev` اجرا شود.
+5. سپس مرورگر را باز کن و برو به:
+
+   
+   http://localhost:3000
+   
+
+
+
+## توضیح کوتاه APIها
+
+در مسیر `/api/` چند نقطه‌ی دسترسی وجود دارد برای ثبت‌نام، ورود، مدیریت کاربران، و ثبت فعالیت‌ها.
+مستندات Swagger نیز با اجرای `node swagger.js` در مسیر زیر قابل مشاهده است:
+
+
+http://localhost:4000/api/docs
+
+
+
+
+## نسخه آنلاین
+
+آدرس دمو فعال در ورسل:
+[https://1-kappa-nine-59.vercel.app/](https://1-kappa-nine-59.vercel.app/)
+
+
+
+می‌خواهی بر اساس همین متن برات فایل آماده‌ی `README.md` برای دانلود درست کنم؟
