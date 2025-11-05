@@ -74,7 +74,3 @@ http://localhost:4000/api/docs
 
 آدرس دمو فعال در ورسل:
 [https://1-kappa-nine-59.vercel.app/](https://1-kappa-nine-59.vercel.app/)
-
-
-
-می‌خواهی بر اساس همین متن برات فایل آماده‌ی `README.md` برای دانلود درست کنم؟
